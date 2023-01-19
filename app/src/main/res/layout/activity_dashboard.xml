@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/design_default_color_secondary_variant" >
+
+        <TextView
+            android:id="@+id/tvLuluPetshop"
+            android:layout_width="183dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="102dp"
+            android:layout_marginBottom="23dp"
+            android:text="Lulu Petshop"
+            android:textColor="@color/white"
+            android:textSize="27dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="71dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="303dp"
+            android:layout_marginBottom="8dp"
+            app:srcCompat="@drawable/pet" />
+    </RelativeLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_secondary_variant"
+        android:id="@+id/buttom_navigation_menu"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/buttom_menu"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"/>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttom_navigation_menu"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="69dp"
+        android:layout_above="@+id/buttom_navigation_menu"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="591dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/design_default_color_secondary_variant"
+        android:text="+"
+        android:textSize="35dp" />
+
+    <TextView
+        android:id="@+id/tvRecomended"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttom_navigation_menu"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="564dp"
+        android:text="Recomended"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <GridView
+        android:id="@+id/mygridviewData"
+        android:layout_width="wrap_content"
+        android:layout_height="460dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginEnd="25dp"
+        android:horizontalSpacing="6dp"
+        android:numColumns="2"
+        android:verticalSpacing="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.836" />
+
+    <TextView
+        android:id="@+id/tvCompletion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttom_navigation_menu"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="103dp"
+        android:layout_marginBottom="33dp"
+        android:text="Lets Adopt With Us!"
+        android:textColor="@color/design_default_color_secondary_variant"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+</RelativeLayout>
