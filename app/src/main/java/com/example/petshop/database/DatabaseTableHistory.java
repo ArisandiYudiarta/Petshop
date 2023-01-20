@@ -8,7 +8,6 @@ public class DatabaseTableHistory {
 
         public static final String TABLE_NAME = "pet_animals_history";
 
-        public static final String COLUMN_PET_LABEL = "Pet_label";
         public static final String COLUMN_PET_TITLE = "Pet_name";
         public static final String COLUMN_PET_AGE = "Pet_age";
         public static final String COLUMN_PET_DESCRIPTION = "Pet_desc";
