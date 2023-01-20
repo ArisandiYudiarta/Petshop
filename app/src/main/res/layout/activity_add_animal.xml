@@ -181,9 +181,9 @@
         android:hint="Enter the Pet's Detail"
         android:paddingStart="10dp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSimpanAdd"
-        android:layout_width="158dp"
+        android:layout_width="173dp"
         android:layout_height="45dp"
         android:layout_below="@+id/etPetsDetail"
         android:layout_alignParentStart="true"
@@ -191,26 +191,28 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="38dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="215dp"
+        android:layout_marginEnd="200dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/button_corner"
         android:backgroundTint="#4FA0FF"
-        android:text="Save" />
+        android:text="Save"
+        android:textColor="@color/white" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCancelAdd"
-        android:layout_width="158dp"
+        android:layout_width="156dp"
         android:layout_height="45dp"
         android:layout_below="@+id/etPetsDetail"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="228dp"
+        android:layout_marginStart="218dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="37dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/button_corner"
-        android:backgroundTint="#4FA0FF"
-        android:text="Cancel" />
+        android:backgroundTint="#FF6464"
+        android:text="Cancel"
+        android:textColor="@color/white" />
 
 </RelativeLayout>
