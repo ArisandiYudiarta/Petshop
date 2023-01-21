@@ -205,19 +205,21 @@
 
         </TableRow>
 
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:background="@android:color/holo_orange_light"
+            android:layout_width="315dp"
+            android:layout_height="60dp"
+            android:background="@drawable/btn_adopt_yellow"
             android:fontFamily="@font/raleway_semibold"
-            android:text="Adopted"
+            android:text="Adopt Now!"
+            android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tableRow"
-            app:layout_constraintVertical_bias="0.883" />
-
+            app:layout_constraintVertical_bias="0.93" />
 
         <TextView
             android:id="@+id/textView3"
