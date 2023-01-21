@@ -207,16 +207,17 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"
-            android:layout_width="174dp"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:background="@android:color/holo_orange_light"
             android:fontFamily="@font/raleway_semibold"
-            android:text="Button"
+            android:text="Adopted"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tableRow"
-            app:layout_constraintVertical_bias="0.871" />
+            app:layout_constraintVertical_bias="0.883" />
+
 
         <TextView
             android:id="@+id/textView3"
