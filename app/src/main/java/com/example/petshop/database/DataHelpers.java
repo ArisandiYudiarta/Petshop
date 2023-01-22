@@ -12,13 +12,14 @@ public class DataHelpers extends SQLiteOpenHelper {
             "CREATE TABLE " + DatabaseTableAnimals.AnimalsColumns.TABLE_NAME + " (" +
             DatabaseTableAnimals.AnimalsColumns._ID + " INTEGER PRIMARY KEY, " +
             DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_TITLE + " TEXT, " +
+                    DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_CATEGORY + " TEXT, " +
+                    DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_GENDER + " TEXT, "+
             DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_AGE + " INT, " +
-            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_DESCRIPTION + " TEXT," +
-            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_CATEGORY + " TEXT, " +
-            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_GENDER + " TEXT, " +
-            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_WEIGHT + " REAL, " +
-            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_HEIGHT + " REAL, " +
-            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_PHOTO + " BLOB )";
+            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_DESCRIPTION + " TEXT )";
+//    , " +
+//            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_WEIGHT + " REAL, " +
+//            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_HEIGHT + " REAL, " +
+//            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_PHOTO + " BLOB )";
 
     private static final String CREATE_TABLE_HISTORY = "CREATE TABLE " + DatabaseTableHistory.AnimalsHistory.TABLE_NAME + " (" +
             DatabaseTableHistory.AnimalsHistory._ID + " INTEGER PRIMARY KEY, " +
