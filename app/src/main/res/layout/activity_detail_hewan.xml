@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="390dp"
+        android:layout_width="0dp"
         android:layout_height="465dp"
         android:layout_marginBottom="289dp"
         android:scaleType="centerCrop"
@@ -22,7 +22,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="410dp"
+        android:layout_width="0dp"
         android:layout_height="471dp"
         android:background="@drawable/wrapper_widget"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,7 +34,7 @@
 
         <TableRow
             android:id="@+id/tableRow"
-            android:layout_width="392dp"
+            android:layout_width="0dp"
             android:layout_height="63dp"
             android:gravity="center_horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
