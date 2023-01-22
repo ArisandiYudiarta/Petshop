@@ -57,36 +57,25 @@ public class HomeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-//        detail = getView().findViewById(R.id.detail);
-//        detail.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent pindah = new Intent(getContext(),DetailHewan.class);
-////                pindah.putExtra("key",)
-//                startActivity(pindah);
-//            }
-//        });
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_home, container, false);
         context = getActivity();
         View root =inflater.inflate(R.layout.fragment_home, container,false);
         return root;
     }
-    public void onStart(){
-        super.onStart();
-        Button detail = (Button) context.findViewById(R.id.detail);
-        detail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, DetailHewan.class);
-                startActivity(intent);
-            }
-        });
-    }
+
+//    public void onStart(){
+//        super.onStart();
+//        Button detail = (Button) context.findViewById(R.id.detail);
+//        detail.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(context, DetailHewan.class);
+//                startActivity(intent);
+//            }
+//        });
+//    }
 }

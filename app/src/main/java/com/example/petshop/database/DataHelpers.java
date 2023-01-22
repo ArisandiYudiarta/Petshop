@@ -24,12 +24,8 @@ public class  DataHelpers extends SQLiteOpenHelper {
             DatabaseTableHistory.AnimalsHistory._ID + " INTEGER PRIMARY KEY, " +
             DatabaseTableHistory.AnimalsHistory.COLUMN_PET_TITLE + " TEXT, " +
             DatabaseTableHistory.AnimalsHistory.COLUMN_PET_AGE + " INT, " +
-            DatabaseTableHistory.AnimalsHistory.COLUMN_PET_DESCRIPTION + " TEXT," +
             DatabaseTableHistory.AnimalsHistory.COLUMN_PET_CATEGORY + " TEXT, " +
-            DatabaseTableHistory.AnimalsHistory.COLUMN_PET_GENDER + " TEXT, " +
-            DatabaseTableHistory.AnimalsHistory.COLUMN_PET_WEIGHT + " REAL, " +
-            DatabaseTableHistory.AnimalsHistory.COLUMN_PET_HEIGHT + " REAL, " +
-            DatabaseTableHistory.AnimalsHistory.COLUMN_PET_PHOTO + " BLOB )";
+            DatabaseTableHistory.AnimalsHistory.COLUMN_PET_GENDER + " TEXT )";
 
     private static final String DELETE_TABLE_ANIMALS = "DROP TABLE IF EXISTS " + DatabaseTableAnimals.AnimalsColumns.TABLE_NAME;
     private static final String DELETE_TABLE_HISTORY = "DROP TABLE IF EXISTS " + DatabaseTableHistory.AnimalsHistory.TABLE_NAME;
