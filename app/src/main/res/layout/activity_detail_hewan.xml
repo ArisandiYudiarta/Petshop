@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="390dp"
-        android:layout_height="465dp"
+        android:layout_width="match_parent"
+        android:layout_height="503dp"
         android:layout_marginBottom="289dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,12 +18,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@drawable/detail_dog_jpg" />
+        app:srcCompat="@drawable/detail_dog_jpg" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="410dp"
-        android:layout_height="471dp"
+        android:layout_width="match_parent"
+        android:layout_height="443dp"
         android:background="@drawable/wrapper_widget"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
 
         <TableRow
             android:id="@+id/tableRow"
-            android:layout_width="392dp"
+            android:layout_width="match_parent"
             android:layout_height="63dp"
             android:gravity="center_horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -207,16 +207,19 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:background="@android:color/holo_orange_light"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:background="@drawable/btn_adopt_yellow"
             android:fontFamily="@font/raleway_semibold"
-            android:text="Adopted"
+            android:text="Adopt Now!"
+            android:textAllCaps="false"
+            android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tableRow"
-            app:layout_constraintVertical_bias="0.883" />
+            app:layout_constraintVertical_bias="0.966" />
 
         <TextView
             android:id="@+id/textView3"
@@ -271,20 +274,16 @@
 
         <TextView
             android:id="@+id/textViewPetStory"
-            android:layout_width="335dp"
-            android:layout_height="154dp"
+            android:layout_width="349dp"
+            android:layout_height="137dp"
+            android:layout_marginTop="48dp"
             android:singleLine="false"
-            android:text="The pet story goes here pet story goes herepet story goes here
-pet story goes herepet story goes herepet story goes herepet story goes herepet story goes here
-pet story goes herepet story goes herepet story goes herepet story goes herepet story goes here
-pet story goes herepet story goes herepet story goes herepet story goes herepet story goes here
-pet story goes herepet story goes herepet story goes herepet story goes here"
+            android:text="The pet story goes here"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tableRow"
-            app:layout_constraintVertical_bias="0.316" />
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
