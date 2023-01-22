@@ -4,28 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardActivity"
-    android:background="@color/white">
+    tools:context=".HistoryFragment">
 
+    <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:background="@color/design_default_color_secondary_variant" >
+        android:background="#F8CC30" >
 
         <TextView
             android:id="@+id/tvHistoryAdoption"
-            android:layout_width="208dp"
-            android:layout_height="37dp"
+            android:layout_width="274dp"
+            android:layout_height="39dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="119dp"
+            android:layout_marginStart="124dp"
             android:layout_marginTop="19dp"
-            android:layout_marginEnd="84dp"
-            android:layout_marginBottom="19dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="17dp"
             android:text="Adoption History"
-            android:textColor="@color/white"
+            android:textColor="@color/purple_500"
             android:textSize="27dp"
             android:textStyle="bold" />
 
@@ -41,34 +42,30 @@
             android:layout_marginTop="6dp"
             android:layout_marginEnd="294dp"
             android:layout_marginBottom="5dp"
-            app:srcCompat="@drawable/adoption" />
+            app:srcCompat="@drawable/animals" />
+
     </RelativeLayout>
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/design_default_color_secondary_variant"
-        android:id="@+id/buttom_navigation_menu"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/buttom_menu"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"/>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/buttom_navigation_menu"/>
+        android:layout_height="wrap_content"/>
 
     <ListView
+<<<<<<< HEAD:app/src/main/res/layout/activity_history.xml
         android:layout_width="wrap_content"
         android:layout_height="596dp"
         android:layout_above="@+id/buttom_navigation_menu"
+=======
+        android:layout_width="match_parent"
+        android:layout_height="653dp"
+        android:layout_below="@id/header"
+>>>>>>> 158427b8d51c632f2c60bf812594d40ca3321923:app/src/main/res/layout/fragment_history.xml
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="-75dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="2dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="1dp" />
 
 </RelativeLayout>

@@ -2,9 +2,13 @@ package com.example.petshop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+<<<<<<< HEAD
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+=======
+import android.content.Intent;
+>>>>>>> 158427b8d51c632f2c60bf812594d40ca3321923
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,5 +42,6 @@ public class DetailHewan extends AppCompatActivity {
             age.setText(cursor.getString(1).toString());
             detail.setText(cursor.getString(2).toString());
         }
+        Intent pindah = getIntent();
     }
 }

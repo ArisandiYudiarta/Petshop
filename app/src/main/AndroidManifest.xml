@@ -20,22 +20,47 @@
                 android:value="" />
         </activity>
         <activity
+<<<<<<< HEAD
             android:name=".HistoryActivity"
             android:exported="false" >
+=======
+            android:name=".HomeActivity"
+            android:exported="false">
+>>>>>>> 158427b8d51c632f2c60bf812594d40ca3321923
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
+<<<<<<< HEAD
             android:name=".AddAnimalActivity"
             android:exported="false" >
+=======
+            android:name=".HomeActivity1"
+            android:exported="false"
+            android:label="@string/title_activity_home1">
+>>>>>>> 158427b8d51c632f2c60bf812594d40ca3321923
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
+<<<<<<< HEAD
             android:name=".DashboardActivity"
             android:exported="false" >
+=======
+            android:name=".Home"
+            android:exported="false"
+            android:label="@string/title_activity_home">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".TestActivity"
+            android:exported="false"
+            android:label="@string/title_activity_test">
+>>>>>>> 158427b8d51c632f2c60bf812594d40ca3321923
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -47,6 +72,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true" >

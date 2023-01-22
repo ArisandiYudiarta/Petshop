@@ -51,7 +51,7 @@
         android:background="@color/design_default_color_secondary_variant"
         android:id="@+id/buttom_navigation_menu"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/buttom_menu"
+        app:menu="@menu/button_menu"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"/>
     
