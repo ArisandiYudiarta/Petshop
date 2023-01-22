@@ -23,7 +23,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="422dp"
+        android:layout_height="443dp"
         android:background="@drawable/wrapper_widget"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -209,11 +209,11 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="58dp"
-            android:textSize="16dp"
             android:background="@drawable/btn_adopt_yellow"
             android:fontFamily="@font/raleway_semibold"
             android:text="Adopt Now!"
             android:textAllCaps="false"
+            android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
@@ -274,20 +274,16 @@
 
         <TextView
             android:id="@+id/textViewPetStory"
-            android:layout_width="335dp"
-            android:layout_height="154dp"
+            android:layout_width="349dp"
+            android:layout_height="137dp"
+            android:layout_marginTop="48dp"
             android:singleLine="false"
-            android:text="The pet story goes here pet story goes herepet story goes here
-pet story goes herepet story goes herepet story goes herepet story goes herepet story goes here
-pet story goes herepet story goes herepet story goes herepet story goes herepet story goes here
-pet story goes herepet story goes herepet story goes herepet story goes herepet story goes here
-pet story goes herepet story goes herepet story goes herepet story goes here"
+            android:text="The pet story goes here"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tableRow"
-            app:layout_constraintVertical_bias="0.316" />
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
