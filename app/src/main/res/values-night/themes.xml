@@ -1,6 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+<<<<<<< HEAD
+    <style name="Theme.Petshop" parent="Theme.MaterialComponents.DayNight">
+=======
     <style name="Theme.Petshop" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+>>>>>>> b008fb7ebf20362f2aabf10a56f03797ee6aab10
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
