@@ -18,11 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-<<<<<<< HEAD
-        tools:srcCompat="@drawable/bgbaru" />
-=======
         app:srcCompat="@drawable/detail_dog_jpg" />
->>>>>>> 37240d94a34981d7d77d5909aa94340c208e2fe7
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
