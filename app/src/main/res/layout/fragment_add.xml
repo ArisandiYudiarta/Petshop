@@ -44,38 +44,10 @@
         app:srcCompat="@drawable/happy" />
 
     <TextView
-        android:id="@+id/tvPetsId"
-        android:layout_width="191dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imvAddPet"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="181dp"
-        android:text="Pet Id"
-        android:textSize="6pt"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/etPetsId"
-        android:layout_width="wrap_content"
-        android:layout_height="34dp"
-        android:layout_below="@+id/tvPetsId"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="37dp"
-        android:background="@drawable/custom_input"
-        android:hint="Enter the Pet's Id"
-        android:paddingStart="10dp" />
-
-    <TextView
         android:id="@+id/tvPetsName"
         android:layout_width="191dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etPetsId"
+        android:layout_below="@+id/imvAddPet"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="38dp"
@@ -271,15 +243,13 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSimpanAdd"
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_below="@+id/tvPetHeight"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPetHeight"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="38dp"
         android:background="@drawable/button_corner"
         android:backgroundTint="@color/purple_500"
         android:text="Save"
