@@ -8,13 +8,12 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnGetStart"
+        android:id="@+id/button2"
         android:layout_width="184dp"
         android:layout_height="60dp"
-        android:background="@drawable/button_custom1"
+        android:background="@drawable/button_custom"
         android:backgroundTint="#F8CC30"
-        android:text="GET STARTED"
-        android:onClick="pindah"
+        android:text="START ADOPTING"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.546"
