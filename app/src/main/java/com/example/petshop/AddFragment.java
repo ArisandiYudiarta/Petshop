@@ -1,6 +1,8 @@
 package com.example.petshop;
 
 import android.app.Activity;
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,6 +12,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.petshop.helpers.AnimalsHelper;
+import com.example.petshop.model.AnimalsModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +30,10 @@ public class AddFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    EditText nama,umur,jenisKel,kategori,tinggi,berat,deskripsi;
+    private AnimalsHelper animalHelper;
+    private AnimalsModel animals;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -62,8 +73,6 @@ public class AddFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_add, container, false);
         context = getActivity();
         View root =inflater.inflate(R.layout.fragment_add, container,false);
         return root;
@@ -71,11 +80,53 @@ public class AddFragment extends Fragment {
     public void onStart(){
         super.onStart();
         Button btnSimpanAdd = (Button) context.findViewById(R.id.btnSimpanAdd);
+        nama = (EditText) context.findViewById(R.id.etPetsName);
+        umur = (EditText) context.findViewById(R.id.etPetsAge);
+        jenisKel = (EditText) context.findViewById(R.id.etPetGender);
+        kategori = (EditText) context.findViewById(R.id.etPetCategory);
+        deskripsi = (EditText) context.findViewById(R.id.etPetDescription);
+        tinggi = (EditText) context.findViewById(R.id.etPetHeight);
+        berat = (EditText)  context.findViewById(R.id.etPetWeight);
+
+        animalHelper = AnimalsHelper.getInstance(context.getApplicationContext());
+        animalHelper.open();
+
+        animals = new AnimalsModel(0,null,null,0,null,null,null,0,0);
+
+
         btnSimpanAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, HomeActivity.class);
-                startActivity(intent);
+//
+            String inputUmur = umur.getText().toString();
+            String inputTinggi = tinggi.getText().toString();
+            String inputBerat = berat.getText().toString();
+
+            String getNama = nama.getText().toString();
+            String getDesc = deskripsi.getText().toString();
+            String getKategori = kategori.getText().toString();
+            String getGender = jenisKel.getText().toString();
+            Float getTinggi = Float.parseFloat(inputTinggi);
+            int getUmur = Integer.parseInt(inputUmur);
+            Float getBerat = Float.parseFloat(inputBerat);
+
+                ContentValues values = new ContentValues();
+                values.put("Pet_name", getNama);
+                values.put("Pet_age", getUmur);
+                values.put("Pet_desc", getDesc);
+                values.put("Pet_category", getKategori);
+                values.put("Pet_gender", getGender);
+                values.put("Pet_height", getTinggi);
+                values.put("Pet_weight", getBerat);
+                values.put("Pet_photo", "");
+
+                long result = animalHelper.insert(values);
+
+                if(result > 0){
+                    animals.setId((int) result);
+                    Toast.makeText(context, "Data Pet Added!", Toast.LENGTH_SHORT).show();
+                    context.finish();
+                }
             }
         });
     }
