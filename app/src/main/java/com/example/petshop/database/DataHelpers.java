@@ -1,6 +1,7 @@
 package com.example.petshop.database;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -16,9 +17,9 @@ public class  DataHelpers extends SQLiteOpenHelper {
             DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_DESCRIPTION + " TEXT," +
             DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_CATEGORY + " TEXT, " +
             DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_GENDER + " TEXT, " +
-            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_WEIGHT + " REAL, " +
-            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_HEIGHT + " REAL, " +
-            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_PHOTO + " BLOB )";
+            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_WEIGHT + " INT, " +
+            DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_HEIGHT + " INT)";
+//    DatabaseTableAnimals.AnimalsColumns.COLUMN_PET_PHOTO + " BLOB
 
     private static final String CREATE_TABLE_HISTORY = "CREATE TABLE " + DatabaseTableHistory.AnimalsHistory.TABLE_NAME + " (" +
             DatabaseTableHistory.AnimalsHistory._ID + " INTEGER PRIMARY KEY, " +
@@ -28,8 +29,9 @@ public class  DataHelpers extends SQLiteOpenHelper {
             DatabaseTableHistory.AnimalsHistory.COLUMN_PET_CATEGORY + " TEXT, " +
             DatabaseTableHistory.AnimalsHistory.COLUMN_PET_GENDER + " TEXT, " +
             DatabaseTableHistory.AnimalsHistory.COLUMN_PET_WEIGHT + " REAL, " +
-            DatabaseTableHistory.AnimalsHistory.COLUMN_PET_HEIGHT + " REAL, " +
-            DatabaseTableHistory.AnimalsHistory.COLUMN_PET_PHOTO + " BLOB )";
+            DatabaseTableHistory.AnimalsHistory.COLUMN_PET_HEIGHT + " INT)";
+
+//    DatabaseTableHistory.AnimalsHistory.COLUMN_PET_PHOTO + " BLOB
 
     private static final String DELETE_TABLE_ANIMALS = "DROP TABLE IF EXISTS " + DatabaseTableAnimals.AnimalsColumns.TABLE_NAME;
     private static final String DELETE_TABLE_HISTORY = "DROP TABLE IF EXISTS " + DatabaseTableHistory.AnimalsHistory.TABLE_NAME;
@@ -39,9 +41,9 @@ public class  DataHelpers extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL(CREATE_TABLE_ANIMALS);
-        sqLiteDatabase.execSQL(CREATE_TABLE_HISTORY);
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL(CREATE_TABLE_ANIMALS);
+        db.execSQL(CREATE_TABLE_HISTORY);
 
     }
 
@@ -50,5 +52,9 @@ public class  DataHelpers extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(DELETE_TABLE_ANIMALS);
         sqLiteDatabase.execSQL(DELETE_TABLE_HISTORY);
         onCreate(sqLiteDatabase);
+    }
+
+    public void execSQL(SQLiteDatabase db, String  s) {
+
     }
 }

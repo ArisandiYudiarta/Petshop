@@ -206,7 +206,7 @@
         </TableRow>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
+            android:id="@+id/btnAdopt"
             android:layout_width="wrap_content"
             android:layout_height="58dp"
             android:background="@drawable/btn_adopt_yellow"
@@ -222,10 +222,10 @@
             app:layout_constraintVertical_bias="0.966" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/displayName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/raleway_semibold"
             android:text="Michi"
             android:textColor="#232020"
@@ -239,15 +239,15 @@
             android:id="@+id/textViewGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="-4dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="8dp"
             android:fontFamily="@font/raleway_semibold"
             android:text="♀"
             android:textColor="#171616"
-            android:textSize="34sp"
+            android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textView3"
-            app:layout_constraintStart_toEndOf="@+id/textView3" />
+            app:layout_constraintBottom_toBottomOf="@+id/displayName"
+            app:layout_constraintStart_toEndOf="@+id/displayName" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -285,6 +285,28 @@
             app:layout_constraintTop_toBottomOf="@+id/tableRow"
             app:layout_constraintVertical_bias="0.0" />
 
+        <TextView
+            android:id="@+id/displayBreed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="French Bulldog"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/displayName" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/displayID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

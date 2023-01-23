@@ -1,22 +1,28 @@
 package com.example.petshop;
 
 import android.app.Activity;
+import android.app.Application;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.example.petshop.database.DataHelpers;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,7 +30,7 @@ import com.example.petshop.database.DataHelpers;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
-    Activity context;
+    public Activity context;
     String[] animals;
     GridView dataGridView;
     Menu menu;
@@ -109,11 +115,44 @@ public class HomeFragment extends Fragment {
         }
 
         dataGridView = (GridView) context.findViewById(R.id.gridDataFragment);
-        dataGridView.setAdapter(new ArrayAdapter(this.context, R.layout.grid_animal, animals));
+        // ubah array adapter jadi custom grid adapter disni;
+        dataGridView.setAdapter(new ArrayAdapter(this.context, android.R.layout.simple_list_item_1, animals));
 
         dataGridView.setSelected(true);
-    }
 
+        dataGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
+                final String selection = animals[arg2];
+                final CharSequence[] dialogitem = {"Detail Hewan","Update Hewan","Hapus Hewan"};
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setTitle("Pilihan");
+                builder.setItems(dialogitem, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int item) {
+                        switch (item){
+                            case 0:
+                                Intent i = new Intent(getContext(), DetailHewan.class);
+                                i.putExtra("nama", selection);
+                                startActivity(i);
+                                break;
+                            case 1:
+                                Intent in = new Intent(getContext(), MainActivity.class);
+                                in.putExtra("nama", selection);
+                                startActivity(in);
+                                break;
+                            case 2:
+                                SQLiteDatabase DB = db.getWritableDatabase();
+                                db.execSQL(DB,"DELETE FROM hewan where nama = '" + selection + "'");
+                                RefreshList();
+                                break;
+                        }
+                    }
+                });
+                builder.create().show();
+            }
+        });
+        ((ArrayAdapter) dataGridView.getAdapter()).notifyDataSetInvalidated();
+    }
 //    public void onStart(){
 //        super.onStart();
 //        Button detail = (Button) context.findViewById(R.id.detail);

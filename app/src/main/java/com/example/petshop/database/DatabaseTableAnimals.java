@@ -5,6 +5,7 @@ import android.provider.BaseColumns;
 public class DatabaseTableAnimals {
 
     public static final class AnimalsColumns implements BaseColumns{
+
         public static final String TABLE_NAME = "pet_animals_table";
 
         public static final String COLUMN_PET_TITLE = "Pet_name";
