@@ -20,25 +20,22 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".HomeActivity1"
-            android:exported="false"
-            android:label="@string/title_activity_home1">
+            android:name=".HistoryActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Home"
-            android:exported="false"
-            android:label="@string/title_activity_home">
+            android:name=".AddAnimalActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".TestActivity"
-            android:exported="false"
-            android:label="@string/title_activity_test">
+            android:name=".DashboardActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -50,7 +47,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
